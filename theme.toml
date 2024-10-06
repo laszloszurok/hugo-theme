@@ -1,7 +1,7 @@
 name = "hugo-theme"
 license = "MIT"
-licenselink = ""
-description = ""
+licenselink = "https://github.com/laszloszurok/hugo-theme/blob/main/LICENSE"
+description = "A minimal hugo theme."
 homepage = ""
 tags = ["minimal", "dark", "blog", "personal", "clean", "simple", "starter", "minimalist"]
 features = ["blog"]
