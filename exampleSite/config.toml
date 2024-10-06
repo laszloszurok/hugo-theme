@@ -1,0 +1,21 @@
+baseURL = "http://example.org"
+languageCode = "en-us"
+title = "example site"
+theme = "monospace-dark"
+copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+
+[author]
+    name = "Your Name"
+
+[params]
+    messageTitle = "Welcome to monospace!"
+    messageContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+
+[[menu.main]]
+    name = "Notes"
+    url = "/notes/"
+    weight = 1
+[[menu.main]]
+    name = "RSS"
+    url = "/index.xml"
+    weight = 2

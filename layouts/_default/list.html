@@ -1,0 +1,24 @@
+{{ partial "header.html" . }}
+
+<div class="wrapper">
+
+{{if not .IsHome }}
+    <h1>{{ .Title | markdownify }}</h1>
+{{ end }}
+
+{{ .Content }}
+
+    <div class="list-container">
+      {{ $pages := .Pages }}
+      {{ if .IsHome }}{{ $pages = .Site.RegularPages }}{{ end }}
+      {{ range (where $pages "Section" "!=" "") }}
+        <div class="list-item">
+            <span>
+                <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
+            </span>
+            <span class="date">{{ .Date.Format "Jan 02, 2006" }}</span>
+        </div>
+      {{ end }}
+    </div>
+</div>
+{{ partial "footer.html" . }}

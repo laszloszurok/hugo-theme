@@ -1,0 +1,413 @@
+:root {
+    --main-bg: #12141c;
+    --main-fg: #e8e6e3;
+    --sec-bg: #0c0d17;
+    --link-fg: #55f;
+    --link-fg-hover: #77f;
+    --content-width: 800px;
+    --dim-fg: #777;
+    --list-item-border-bottom-color: #222;
+    --list-item-fg: #d8d7d6;
+    --list-item-hover-fg: #fff;
+}
+
+/* giving some offset for anchors, so 
+ * the navbar won't cover them after 
+ * scrolling to them */
+:target {
+    scroll-margin-top: 65px;
+}
+
+html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    padding: 0 1em;
+    margin: auto;
+    background: var(--main-bg);
+    color: var(--main-fg);
+}
+
+/* extra space for footer */
+body::after {
+    content: '';
+    display: block;
+    height: 150px;
+}
+
+/* links */
+a,
+a:visited,
+a:active {
+    color: var(--link-fg);
+    text-decoration: underline;
+}
+
+a:hover {
+    color: var(--link-fg-hover);
+}
+
+.home {
+    text-transform: uppercase;
+    padding: 0;
+}
+
+.home a {
+    color: var(--main-fg);
+    text-decoration: none;
+    padding: 0.7em 0.7em;
+    margin: 0 0.3em 0.3em 0;
+    box-sizing: border-box;
+    font-family: "Fira Code", monospace;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.home a:hover { color: var(--link-fg); }
+
+.message { margin-bottom: 3em; }
+
+.article-meta .date { color: var(--dim-fg) }
+
+.list-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.1rem solid var(--list-item-border-bottom-color);
+    padding: 0.7em 0;
+}
+
+.list-item a {
+    color: var(--list-item-fg);
+    flex: 1;
+    text-decoration: none;
+}
+
+.list-item a:hover {
+    color: var(--list-item-hover-fg);
+}
+
+.list-item .date {
+    text-align: right;
+    margin-left: 20px;
+    white-space: nowrap;
+    color: var(--dim-fg);
+}
+
+/* link to all notes on home page */
+#show-all-btn {
+    margin-top: 2em;
+}
+
+#show-all-btn a {
+    color: var(--dim-fg);
+}
+
+#show-all-btn a:hover {
+    color: var(--main-fg);
+}
+
+/* next/prev buttons at the end of posts */
+.pagination__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5em;
+}
+
+.button .previous,
+.button .next {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button a {
+    margin: 1em;
+    padding: 0.5em;
+    border-radius: 0.2em;
+    background: #333;
+    color: var(--main-fg);
+    text-decoration: none;
+}
+
+/* header and footer areas */
+nav {
+    width: 100%;
+    max-width: var(--content-width);
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0 1em;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    background: var(--main-bg);
+    z-index: 5;
+}
+
+.header {
+    max-width: initial;
+    background: var(--sec-bg);
+}
+
+.menu {
+    flex: 3;
+    text-align: right;
+    text-transform: uppercase;
+    padding: 0;
+}
+
+.menu li {
+    display: inline-block;
+}
+
+.article-meta,
+.menu a {
+    color: var(--main-fg);
+    text-decoration: none;
+    padding: 0.7em 0.7em;
+    margin: 0 0.3em 0.3em 0;
+    box-sizing: border-box;
+}
+
+.menu a:hover {
+    color: var(--link-fg);
+}
+
+.wrapper {
+    margin: 10em auto 10em auto;
+    min-height: calc(100vh - 23.4em);
+    max-width: var(--content-width);
+}
+
+/* banner */
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5em;
+    padding-left: 3em;
+}
+
+.ascii {
+    flex: 2;
+    background: none;
+}
+
+.message {
+    flex: 3;
+    margin-left: -6em;
+    padding: 0 5em 0 2em;
+}
+
+footer {
+    background: var(--sec-bg);
+    padding: 3em 0;
+    line-height: 2em;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.copyright>*:not(:last-child)::after {
+    content: "•";
+    margin: 0 0 0 0.6em;
+}
+
+.article-meta {
+    /*text-align: center;*/
+    padding: 0;
+    max-width: var(--content-width);
+    margin: auto;
+    margin-top: 7em;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+/* misc elements */
+img,
+iframe,
+video {
+    max-width: 100%;
+}
+
+main {
+    hyphens: auto;
+    margin: auto auto 10em auto;
+    max-width: var(--content-width);
+}
+
+main h2 {
+    margin-bottom: 0.5em;
+}
+
+main h2:not(:first-child) {
+    margin-top: 1em;
+}
+
+main p {
+    line-height: 1.7rem;
+}
+
+blockquote {
+    background: #f9f9f9;
+    border-left: 5px solid #ccc;
+    padding: 3px 1em 3px;
+}
+
+table {
+    margin: auto;
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666;
+}
+
+table thead th {
+    border-bottom: 1px solid #ddd;
+}
+
+th,
+td {
+    padding: 5px;
+}
+
+thead,
+tfoot,
+tr:nth-child(even) {
+    background: #eee;
+}
+
+/* code blocks and terminal commands */
+code {
+    background: #262b33;
+    padding: 0.1rem 0.3rem;
+    border-radius: 0.2rem;
+}
+
+pre {
+    padding: 1em;
+    background: var(--sec-bg);
+    border: none;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+}
+
+pre code {
+    background: var(--sec-bg);
+    padding: initial;
+}
+
+.language-terminal {
+    margin: 20px 0 20px -5px !important;
+}
+
+code.language-terminal::before {
+    content: '❯';
+    padding-right: 10px;
+    position: relative;
+    top: -1px;
+}
+
+.language-bash,
+.language-text,
+.language-c {
+    margin: 20px 0 20px 0 !important;
+}
+
+/* style for the fontawesome shortcode */
+.inline-svg {
+    display: inline-block;
+    height: 1.15rem;
+    width: 1.15rem;
+    top: 0.15rem;
+    position: relative;
+}
+
+@media only screen and (max-width: 800px) {
+    nav {
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .menu {
+        text-align: center;
+    }
+
+    .banner {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .message { margin: initial; }
+
+    .home { padding: 1em 0 0 0; }
+}
+
+@media only screen and (max-width: 650px) {
+    .pagination__buttons {
+        flex-direction: column;
+        margin: 0;
+        padding: 3em 0 0 0;
+        line-height: 3em;
+    }
+
+    .button a {
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    footer {
+        padding: 2em;
+    }
+
+    .menu a {
+        padding: 0;
+    }
+
+    .menu ul {
+        margin-bottom: 1em;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .message {
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 1700px) {
+    .banner {
+        margin-top: -4em;
+    }
+}

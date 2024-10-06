@@ -1,0 +1,2 @@
+<!-- make sure target="_blank" is added for every link -->
+{{- "" -}}<a href="{{ .Destination | safeURL }}"{{ with .Title}} title="{{ . }}"{{ end }}{{ if strings.HasPrefix .Destination "http" }} target="_blank"{{ end }}>{{- "" -}}{{ .Text }}</a>{{- "" -}}

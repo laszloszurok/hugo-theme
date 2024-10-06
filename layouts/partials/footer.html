@@ -1,0 +1,13 @@
+<footer>
+    <div class="copyright">
+
+        <span>&copy; {{ now.Format "2006" }}</span>
+        <!-- .Site.Params.customUrl is a custom variable that has to be created in config.toml under the [params] block -->
+        {{ if .Site.Params.author.name }}<span><a href="{{ .Site.Params.customUrl }}" target="_blank">{{ .Site.Params.author.name }}</a></span>{{ end }}
+        {{ if .Site.Copyright }}<span>{{ .Site.Copyright| safeHTML }}</span>{{ end }}
+
+    </div>
+    {{ partial "foot_custom.html" . }}
+</footer>
+</body>
+</html>

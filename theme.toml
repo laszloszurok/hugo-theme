@@ -1,0 +1,12 @@
+name = "hugo-theme"
+license = "MIT"
+licenselink = ""
+description = ""
+homepage = ""
+tags = ["minimal", "dark", "blog", "personal", "clean", "simple", "starter", "minimalist"]
+features = ["blog"]
+min_version = "0.18"
+
+[author]
+  name = "László Szurok"
+  homepage = "https://pulzar.envs.net"
