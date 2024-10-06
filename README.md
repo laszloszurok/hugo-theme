@@ -8,6 +8,8 @@ https://pulzar.envs.net
 
 ```sh
 git clone https://github.com/laszloszurok/hugo-theme
+git submodule init
+git submodule update
 cd hugo-theme/exampleSite
 hugo serve
 ```
