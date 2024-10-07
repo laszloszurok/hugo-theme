@@ -344,21 +344,6 @@ code.language-terminal::before {
     top: -1px;
 }
 
-.language-bash,
-.language-text,
-.language-c {
-    margin: 20px 0 20px 0 !important;
-}
-
-/* style for the fontawesome shortcode */
-.inline-svg {
-    display: inline-block;
-    height: 1.15rem;
-    width: 1.15rem;
-    top: 0.15rem;
-    position: relative;
-}
-
 @media only screen and (max-width: 800px) {
     nav {
         flex-direction: column;
