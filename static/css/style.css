@@ -2,6 +2,7 @@
     --main-bg: #16141C;
     --main-fg: #e8e6e3;
     --sec-bg: #121117;
+    --term-bg: #292733;
     --link-fg: #55f;
     --link-fg-hover: #77f;
     --content-width: 800px;
@@ -322,14 +323,14 @@ code {
 
 pre {
     padding: 1em;
-    background: var(--sec-bg);
+    background: var(--term-bg);
     border: none;
     border-radius: 0.5rem;
     overflow-x: auto;
 }
 
 pre code {
-    background: var(--sec-bg);
+    background: var(--term-bg);
     padding: initial;
 }
 
