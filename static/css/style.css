@@ -6,7 +6,7 @@
     --link-fg-hover: #77f;
     --content-width: 800px;
     --dim-fg: #777;
-    --list-item-border-bottom-color: #222;
+    --border-bottom-separator-color: #222;
     --list-item-fg: #d8d7d6;
     --list-item-hover-fg: #fff;
 }
@@ -78,7 +78,16 @@ a:hover {
 
 .message { margin-bottom: 3em; }
 
-.article-meta .date { color: var(--dim-fg) }
+.article-meta {
+    border-bottom: 0.1rem solid var(--border-bottom-separator-color);
+}
+.article-meta .createdat,
+.article-meta .lastmodat {
+    color: var(--dim-fg);
+}
+.article-meta>*:last-child {
+    padding-bottom: 0.7em;
+}
 
 .list-container {
     display: flex;
@@ -88,7 +97,7 @@ a:hover {
 .list-item {
     display: flex;
     justify-content: space-between;
-    border-bottom: 0.1rem solid var(--list-item-border-bottom-color);
+    border-bottom: 0.1rem solid var(--border-bottom-separator-color);
     padding: 0.7em 0;
 }
 
