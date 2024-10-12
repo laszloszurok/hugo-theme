@@ -255,22 +255,22 @@ main h2:not(:first-child) {
     margin-top: 1em;
 }
 
-main h2 a {
+main :is(h1, h2, h3, h4, h5, h6) a {
     color: var(--main-fg);
     text-decoration: none;
 }
 
-main h2 a:visited {
+main :is(h1, h2, h3, h4, h5, h6) a:visited {
     color: var(--main-fg);
+}
+
+main :is(h1, h2, h3, h4, h5, h6) a:hover {
+    color: var(--list-item-hover-fg);
 }
 
 a:active {
     color: var(--link-fg);
     text-decoration: none;
-}
-
-main h2 a:hover {
-    color: var(--list-item-hover-fg);
 }
 
 main p {
