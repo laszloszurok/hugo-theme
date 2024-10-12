@@ -255,16 +255,16 @@ main h2:not(:first-child) {
     margin-top: 1em;
 }
 
-main :is(h1, h2, h3, h4, h5, h6) a {
+.h-anchor {
     color: var(--main-fg);
     text-decoration: none;
 }
 
-main :is(h1, h2, h3, h4, h5, h6) a:visited {
+.h-anchor:visited {
     color: var(--main-fg);
 }
 
-main :is(h1, h2, h3, h4, h5, h6) a:hover {
+.h-anchor:hover {
     color: var(--list-item-hover-fg);
 }
 
