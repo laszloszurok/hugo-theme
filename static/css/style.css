@@ -7,7 +7,7 @@
     --link-fg-hover: #77f;
     --content-width: 800px;
     --dim-fg: #777;
-    --border-bottom-separator-color: #222;
+    --border-separator-color: #222;
     --list-item-fg: #d8d7d6;
     --list-item-hover-fg: #fff;
 }
@@ -80,7 +80,7 @@ a:hover {
 .message { margin-bottom: 3em; }
 
 .article-meta {
-    border-bottom: 0.1rem solid var(--border-bottom-separator-color);
+    border-bottom: 0.1rem solid var(--border-separator-color);
     color: var(--main-fg);
     max-width: var(--content-width);
     margin: 7em auto auto auto;
@@ -104,7 +104,7 @@ a:hover {
 .list-item {
     display: flex;
     justify-content: space-between;
-    border-bottom: 0.1rem solid var(--border-bottom-separator-color);
+    border-bottom: 0.1rem solid var(--border-separator-color);
     padding: 0.7em 0;
 }
 
