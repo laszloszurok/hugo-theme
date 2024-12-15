@@ -33,14 +33,14 @@
         {{ range (.Paginate ( where site.RegularPages "Section" "!=" "" | first 5 ) ).Pages }}
         <div class="list-item">
             <span>
-                <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
+                <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
             </span>
             <span class="date">{{ .Date.Format "Jan 02, 2006" }}</span>
         </div>
       {{ end }}
     </div>
     <div id="show-all-btn">
-        <a href="/notes">See all</a>
+        <a href={{ absURL "/notes" }}>See all</a>
     </div>
 </div>
 {{ partial "footer.html" . }}
