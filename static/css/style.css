@@ -52,7 +52,7 @@ a,
 a:visited,
 a:active {
     color: var(--link-fg);
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 a:hover {
@@ -132,6 +132,7 @@ a:hover {
 
 #show-all-btn a {
     color: var(--dim-fg);
+    text-decoration: underline;
 }
 
 #show-all-btn a:hover {
