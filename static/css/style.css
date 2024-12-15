@@ -211,7 +211,7 @@ nav {
 
 footer {
     background: var(--sec-bg);
-    padding: 3em 0;
+    padding: 2em 0;
     line-height: 2em;
     position: absolute;
     width: 100%;
@@ -228,6 +228,14 @@ footer p {
 .copyright>*:not(:last-child)::after {
     content: "•";
     margin: 0 0 0 0.6em;
+}
+
+.copyright {
+    margin: auto;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+    max-width: var(--content-width);
+    border-bottom: 0.1rem solid var(--border-separator-color);
 }
 
 footer a {
