@@ -323,7 +323,7 @@ code.language-terminal::before {
     top: -1px;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 450px) {
     nav {
         flex-direction: column;
         padding: 0;
@@ -332,31 +332,15 @@ code.language-terminal::before {
         right: 0;
     }
 
-    .menu {
-        text-align: center;
-    }
-
-    .banner {
-        flex-direction: column;
-        padding: 0;
-    }
-
-    .message { margin: initial; }
-
     .home { padding: 1em 0 0 0; }
-}
 
-@media only screen and (max-width: 450px) {
     footer {
         padding: 2em;
     }
 
-    .menu a {
-        padding: 0;
-    }
-
     .menu ul {
         margin-bottom: 1em;
+        text-align: center;
     }
 }
 
@@ -364,6 +348,15 @@ code.language-terminal::before {
     .message {
         padding: 0;
     }
+}
+
+@media only screen and (max-width: 800px) {
+    .banner {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .message { margin: initial; }
 }
 
 @media only screen and (max-width: 1700px) {
