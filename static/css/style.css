@@ -314,6 +314,7 @@ pre code {
 
 .language-terminal {
     margin: 20px 0 20px -5px !important;
+    line-height: 1.2em;
 }
 
 code.language-terminal::before {
