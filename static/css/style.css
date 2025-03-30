@@ -10,6 +10,7 @@
     --border-separator-color: #222;
     --list-item-fg: #d8d7d6;
     --list-item-hover-fg: #fff;
+    --table-border-color: #292733;
 }
 
 /* giving some offset for anchors, so 
@@ -322,6 +323,16 @@ code.language-terminal::before {
     padding-right: 10px;
     position: relative;
     top: -1px;
+}
+
+table, th, td {
+  border: 1px solid var(--table-border-color);
+  border-collapse: collapse;
+  padding: 0.5em;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: var(--sec-bg);
 }
 
 @media only screen and (max-width: 450px) {
