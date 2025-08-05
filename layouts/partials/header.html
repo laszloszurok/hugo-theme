@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>{{ .Title }} | {{ .Site.Title }}</title>
 
-        {{ if .Params.findpage_searchbar_enabled }}
+        {{ if .Params.pagefind_searchbar_enabled }}
         <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
         <script src="/pagefind/pagefind-ui.js"></script>
         <link rel="stylesheet" href={{ absURL "/css/pagefind.css" }} />

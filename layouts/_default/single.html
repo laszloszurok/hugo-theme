@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
 
-{{ if or .Params.draft (not .Params.findpage_index_page) }}
+{{ if or .Params.draft (not .Params.pagefind_index_page) }}
 <div class="wrapper" data-pagefind-ignore>
 {{ else }}
 <div>

@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
 
-{{ if not .Params.findpage_index_page }}
+{{ if not .Params.pagefind_index_page }}
 <div class="wrapper" data-pagefind-ignore>
 {{ else }}
 <div class="wrapper">
@@ -10,7 +10,7 @@
     <h1>{{ .Title | markdownify }}</h1>
 {{ end }}
 
-{{ if .Params.findpage_searchbar_enabled }}
+{{ if .Params.pagefind_searchbar_enabled }}
     <div id="search"></div>
     <script>
         window.addEventListener('DOMContentLoaded', (event) => {
