@@ -1,0 +1,21 @@
+:root {
+    --pagefind-ui-scale: 0.75;
+    --pagefind-ui-primary: #034ad8;
+    --pagefind-ui-text: #fff;
+    --pagefind-ui-background: #101010;
+    --pagefind-ui-border: #494753;
+    --pagefind-ui-tag: #eeeeee;
+    --pagefind-ui-border-width: 1px;
+    --pagefind-ui-border-radius: 5px;
+    --pagefind-ui-image-border-radius: 8px;
+    --pagefind-ui-image-box-ratio: 3 / 2;
+    --pagefind-ui-font: sans-serif;
+}
+
+#search {
+    margin-bottom: 1em;
+}
+
+.pagefind-ui__search-input::placeholder {
+    opacity: 0.5 !important;
+}
