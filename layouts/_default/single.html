@@ -3,7 +3,8 @@
 {{ if or .Params.draft (not .Params.pagefind_index_page) }}
 <div class="wrapper" data-pagefind-ignore>
 {{ else }}
-<div>
+<div class="wrapper">
+{{ end }}
     <div class="article-meta">
         <h1><span class="title">{{ .Title | markdownify }}</span></h1>
         <div class="createdat">Created at {{ .Date.Format "2006-01-02 15:04" }}</div>
@@ -14,6 +15,5 @@
         {{ partial "anchor-headings.html" .Content }}
     </main>
 </div>
-{{ end }}
 
 {{ partial "footer.html" . }}
