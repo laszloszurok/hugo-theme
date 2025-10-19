@@ -294,28 +294,21 @@ blockquote {
 }
 
 /* code blocks and terminal commands */
-code {
-    background: #262b33;
-    padding: 0.1rem 0.3rem;
-    border-radius: 0.2rem;
-}
-
 pre {
     padding: 1em;
-    background: var(--term-bg);
     border: none;
     border-radius: 0.5rem;
     overflow-x: auto;
 }
 
-pre code {
-    background: var(--term-bg);
+pre:has(code.language-terminal) {
     padding: initial;
+    background: var(--term-bg);
 }
 
-.language-terminal {
-    margin: 20px 0 20px -5px !important;
-    line-height: 1.2em;
+code.language-terminal {
+    display: block;
+    padding: 1em;
 }
 
 code.language-terminal::before {
