@@ -1,6 +1,7 @@
 :root {
     --main-bg: #16141C;
     --main-fg: #e8e6e3;
+    --highligh-bg: #262b33;
     --sec-bg: #121117;
     --term-bg: #292733;
     --link-fg: #55f;
@@ -304,6 +305,12 @@ pre {
 pre:has(code.language-terminal) {
     padding: initial;
     background: var(--term-bg);
+}
+
+code:not([class]) {
+    background: var(--highligh-bg);
+    padding: 0.1rem 0.3rem;
+    border-radius: 0.2rem;
 }
 
 code.language-terminal {
