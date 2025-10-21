@@ -303,19 +303,18 @@ pre {
 }
 
 pre:has(code.language-terminal) {
-    padding: initial;
+    padding: 1.2em;
     background: var(--term-bg);
+}
+
+pre code {
+    display: inline-block;
 }
 
 code:not([class]) {
     background: var(--highligh-bg);
     padding: 0.1rem 0.3rem;
     border-radius: 0.2rem;
-}
-
-code.language-terminal {
-    display: block;
-    padding: 1em;
 }
 
 code.language-terminal::before {
