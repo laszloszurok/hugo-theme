@@ -14,8 +14,8 @@
     --table-border-color: #292733;
 }
 
-/* giving some offset for anchors, so 
- * the navbar won't cover them after 
+/* giving some offset for anchors, so
+ * the navbar won't cover them after
  * scrolling to them */
 :target {
     scroll-margin-top: 65px;
